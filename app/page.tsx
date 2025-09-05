@@ -9,6 +9,7 @@ import { MarketSnapshot } from "@/components/market-snapshot"
 import { GlassContainer } from "@/components/glass-container"
 import { SimpleMenubar } from "@/components/simple-menubar"
 import { Trophy, Star, BookOpen, Brain, TrendingUp, Languages, Video, Home } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
   const { t } = useLanguage()
@@ -44,8 +45,8 @@ export default function HomePage() {
 
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-12 w-12 rounded-2xl bg-black flex items-center justify-center">
-              <span className="text-white font-bold text-xl">₹</span>
+            <div className="h-12 w-12 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+              <Image src="/inviguide-logo.png" alt="Inviguide Logo" width={32} height={32} className="object-contain" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-white text-balance">{t.home.title}</h1>
           </div>
